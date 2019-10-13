@@ -1,6 +1,6 @@
-import tkinter as tk
+from cloudoWindow import CloudoWindow
 
-root = tk.Tk()
-root.title('cloudo')
+cloudo = CloudoWindow()
 
-root.mainloop()
+
+
