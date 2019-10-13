@@ -14,21 +14,19 @@ class CloudoWindow:
 
         self.canvas = tk.Canvas(self.root, width=self.appWidth, height=self.appHeight)
 
-        background_image = tk.PhotoImage(file='imgs/sky.png')
-        self.backgroundLabel = tk.Label(self.root, image=background_image)
+        self.background_image = tk.PhotoImage(file='imgs/sky.png')
+        self.backgroundLabel = tk.Label(self.root, image=self.background_image)
 
         self.input = tk.Entry(self.root, bg='white', font=(self.font, 12))
 
         self.btn = tk.Button(self.root, bg='#1394eb', fg='white', highlightcolor='#9ad0f5', text='Search',
-                             font=(self.font, 12), command=lambda: btn_callback())
+                             font=(self.font, 12), command=lambda: btn_callback(self.input.get()))
 
-        self.weatherInfoList = tk.Listbox(self.root)
+        self.weatherInfoList = tk.Listbox(self.root, justify='left')
         #for line in range(100):
             #self.weatherInfoList.insert(tk.END, 'line number ' + str(line))
 
         self.place_widgets()
-
-        self.root.mainloop()
 
     def place_widgets(self):
         self.canvas.pack()

@@ -1,6 +1,7 @@
 from cloudo import Cloudo
 
-cloudo = Cloudo()
-
+if __name__ == '__main__':
+    cloudo = Cloudo()
+    cloudo.start()
 
 
