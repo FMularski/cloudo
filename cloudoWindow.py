@@ -3,7 +3,7 @@ import pyautogui as pag
 
 
 class CloudoWindow:
-    def __init__(self):
+    def __init__(self, btn_callback):
         self.root = tk.Tk()
         self.root.title('cloudo')
         self.font ='Arial'
@@ -20,7 +20,11 @@ class CloudoWindow:
         self.input = tk.Entry(self.root, bg='white', font=(self.font, 12))
 
         self.btn = tk.Button(self.root, bg='#1394eb', fg='white', highlightcolor='#9ad0f5', text='Search',
-                             font=(self.font, 12))
+                             font=(self.font, 12), command=lambda: btn_callback())
+
+        self.weatherInfoList = tk.Listbox(self.root)
+        #for line in range(100):
+            #self.weatherInfoList.insert(tk.END, 'line number ' + str(line))
 
         self.place_widgets()
 
@@ -31,4 +35,5 @@ class CloudoWindow:
         self.backgroundLabel.place(relwidth=1, relheight=1)
         self.input.place(relx=0.45, rely=0.15, relwidth=0.3, relheight=0.04, anchor='n')
         self.btn.place(relx=0.7, rely=0.15, relwidth=0.1, relheight=0.04, anchor='n')
+        self.weatherInfoList.place(relx=0.5, rely=0.25, relwidth=0.7, relheight=0.7, anchor='n')
 

@@ -1,6 +1,6 @@
-from cloudoWindow import CloudoWindow
+from cloudo import Cloudo
 
-cloudo = CloudoWindow()
+cloudo = Cloudo()
 
 
 
