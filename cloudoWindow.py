@@ -20,8 +20,6 @@ class CloudoWindow:
 
         self.input = tk.Entry(self.root, bg='white', font=(self.font, 12))
 
-        # self.weatherInfoLabel = tk.Label(self.root, justify='left', anchor='nw')
-
         self.weatherInfoText = tkst.ScrolledText(self.root)
 
         self.btn = tk.Button(self.root, bg='#1394eb', fg='white', highlightcolor='#9ad0f5', text='Search',
