@@ -1,0 +1,2 @@
+# cloudo
+forecast desktop client
